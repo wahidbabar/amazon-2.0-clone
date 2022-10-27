@@ -27,7 +27,7 @@ function Checkout() {
         items: items,
         email: session.user.email,
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log("error", error));
 
     // Redirect user/customer to Stripe Checkout
     const result = await stripe.redirectToCheckout({
