@@ -8,7 +8,8 @@ import { useSession } from "next-auth/react";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 
-const stripePromise = loadStripe(process.env.stripe_public_key);
+// const stripePromise = loadStripe(process.env.stripe_public_key);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 function Checkout() {
   const { data: session } = useSession();
